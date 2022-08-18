@@ -1,0 +1,86 @@
+const asyncHandler = require('express-async-handler')
+const Blog = require('../models/blogModel')
+const User = require('../models/userModel')
+
+//get Blogs
+//Route GET api/blogs
+const getBlog = asyncHandler (async(req,res) => {
+    const blogs = await Blog.find({ user: req.user.id })
+    res.status(200).json(blogs)
+})
+
+// Sets Blogs
+//Route POST api/blogs
+const setBlog = asyncHandler(async(req,res) => {
+    console.log(req.body.text)
+    if(!req.body.text) {
+        res.status(400)
+        throw new Error('Please add a text field')
+      }
+      const blog = await Blog.create({
+        text: req.body.text,
+        user: req.user.id
+    })
+    res.status(200).json(blog)
+})
+
+// Updates Blogs
+//Route PUT api/blogs/:id
+const updateBlog = asyncHandler(async(req,res) => {
+
+    const blog = await Blog.findById(req.params.id)
+    
+    if(!blog){
+        res.status(400)
+        throw new Error('Blog not found')
+    }
+
+    // Check for user
+  if (!req.user) {
+    res.status(401)
+    throw new Error('User not found')
+  }
+
+  // Make sure the logged in user matches the blog user
+  if (blog.user.toString() !== req.user.id) {
+    res.status(401)
+    throw new Error('User not authorized')
+  }
+
+    const updatedBlog = await Blog.findByIdAndUpdate(req.params.id, req.body,{ new: true
+    })
+    res.status(200).json(updatedBlog)
+})
+
+// Delete Blogs
+//Route DELETE api/blogs/:id
+const deleteBlog = asyncHandler(async(req,res) => {
+    const blog = await Blog.findById(req.params.id)
+
+    if (!blog) {
+      res.status(400)
+      throw new Error('Blog not found')
+    }
+
+    // Check for user
+  if (!req.user) {
+    res.status(401)
+    throw new Error('User not found')
+  }
+
+  // Make sure the logged in user matches the blog user
+  if (blog.user.toString() !== req.user.id) {
+    res.status(401)
+    throw new Error('User not authorized')
+  }
+
+    await blog.remove()
+    res.status(200).json({id: req.params.id})
+})
+
+module.exports = {
+    getBlog, 
+    setBlog, 
+    updateBlog, 
+    deleteBlog
+}
