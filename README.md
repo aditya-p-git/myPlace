@@ -30,7 +30,7 @@ Blogging App (minimalist theme), built on a Single-page application model.
           
 2. User/testing manual - 
  
-    To test backend APIs on Postman use -
+    To test backend APIs on Postman or other such platforms use -
     
       i) To register new user -  https://myblogplace.herokuapp.com/api/users/
       
