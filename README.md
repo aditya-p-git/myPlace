@@ -4,6 +4,10 @@ Blogging App (minimalist theme), built on a Single-page application model.
 1. Current status of Project -
     
     i) Live project web application can be accessed at - https://jazzy-nasturtium-449f68.netlify.app/
+         
+         Login in credentials to test live app login functionality -
+         Email - user@gmail.com
+         Password - 123
 
 
     ii) Backend -
