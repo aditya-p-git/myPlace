@@ -40,5 +40,11 @@ Blogging App (minimalist theme)
        Hit this API by GET request (authentication token received while Login shall also be attached)
        
        Response - All blogs pertenaning to a particular user can be received.
-            
+       
+       
+      iii) To post blogs of a particular user - https://myblogplace.herokuapp.com/api/blogs/
+      
+      Hit this API by sending a POST request with 'text' 'email' and 'password', url-encoded in Body. (authentication token received while Login shall also be attached)
+       
+       Response - All blogs pertenaning to a particular user can be received.      
           
