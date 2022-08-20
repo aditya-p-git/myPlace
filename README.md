@@ -1,14 +1,17 @@
 # myPlace
 Blogging App (minimalist theme)
 
-1. Current status of Project - 
+1. Current status of Proje
+    
+    i) Live project can be accessed at - https://jazzy-nasturtium-449f68.netlify.app/
 
-    i) Backend -
+
+    ii) Backend -
     
         . Backend API's facilitating CRUD operations are working. Using these API's User logins can be authenticated and Blog posts 
         can be create, retreived, edited and deleted.
       
-    ii) Frontend -
+    iii) Frontend -
     
        . User logins and new User registrations can be done using front-end.
        
