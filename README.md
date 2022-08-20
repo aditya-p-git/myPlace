@@ -37,14 +37,31 @@ Blogging App (minimalist theme)
           
       iii) To get blogs of a particular user - https://myblogplace.herokuapp.com/api/blogs/
       
-       Hit this API by GET request (authentication token received while Login shall also be attached as a bearear token while testing this feature)
+       Hit this API by GET request (User authentication token received while Login shall also be attached as a bearear token while testing this feature)
        
        Response - All blogs pertenaning to a particular user can be received.
        
        
-      iii) To post blogs as a particular user - https://myblogplace.herokuapp.com/api/blogs/
+      iv) To post blogs as a particular user - https://myblogplace.herokuapp.com/api/blogs/
       
-      Hit this API by sending a POST request with 'text' 'email' and 'password', url-encoded in Body. (authentication token received while Login shall also be attached as a bearear token while testing this feature)
+      Hit this API by sending a POST request with 'text' 'email' and 'password', url-encoded in Body. (User authentication token received while Login shall also be attached as a bearear token while testing this feature)
        
        Response - All blogs pertenaning to a particular user can be received.      
-          
+      
+      v) To edit blog as a particular user - https://myblogplace.herokuapp.com/api/blogs/id
+      
+      Hit this API by sending a PUT request with 'text', url-encoded in Body. (User authentication token received while Login shall also be attached as a bearear token while testing this feature)
+      
+      Note - 'id' in url mentioned above is id of blog which is to be deleted.
+       
+       Response - Blog id along with edited blog text shall be received. 
+       
+     vi) To delete blogs as a particular user - https://myblogplace.herokuapp.com/api/blogs/id
+      
+      Hit this API by sending a DELETE request with (User authentication token received while Login shall also be attached as a bearear token while testing this feature).
+      
+      Note - 'id' in url mentioned above is id of blog which is to be deleted.
+       
+       Response - Blog id of deleted blog post shall be received.
+       
+       
