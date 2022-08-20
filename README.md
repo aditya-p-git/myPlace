@@ -1,9 +1,9 @@
 # myPlace
-Blogging App (minimalist theme)
+Blogging App (minimalist theme), built on a Single-page application model.
 
-1. Current status of Proje
+1. Current status of Project -
     
-    i) Live project can be accessed at - https://jazzy-nasturtium-449f68.netlify.app/
+    i) Live project web application can be accessed at - https://jazzy-nasturtium-449f68.netlify.app/
 
 
     ii) Backend -
