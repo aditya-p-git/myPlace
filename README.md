@@ -4,6 +4,7 @@ Blogging App (minimalist theme)
 1. Current status of Project -
     i) Backend -
       . Backend API's facilitating CRUD operations are working. Using these API's User logins can be authenticated and Blog posts can be create, retreived, edited and           deleted.
+      
     ii) Frontend -
        . User logins and new User registrations and be done.
        . Pending functionalities (to be released in next build) 
