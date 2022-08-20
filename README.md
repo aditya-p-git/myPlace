@@ -1,8 +1,8 @@
 # myPlace
 Blogging App (minimalist theme)
 
-1. Current status of Project -
-2. 
+1. Current status of Project - 
+
     i) Backend -
     
       . Backend API's facilitating CRUD operations are working. Using these API's User logins can be authenticated and Blog posts can be create, retreived, edited and           deleted.
@@ -20,7 +20,7 @@ Blogging App (minimalist theme)
           . Logout button.
           
 2. User/testing manual - 
-3. 
+ 
     To test backend APIs on Postman use -
     
       i) To register new user -  https://myblogplace.herokuapp.com/api/users/
